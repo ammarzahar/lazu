@@ -17,5 +17,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MarketingEventsSeeder::class,
         ]);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Demo User',
+            'email' => 'demo@lazu.app',
+            'password' => bcrypt('password'),
+        ]);
     }
 }
